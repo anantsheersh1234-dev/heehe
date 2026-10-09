@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A little gift for my baby 🌺</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+  :root{--cream:#fff8f2;--pink:#f5c5cf;--rose:#d94d70;--deep:#813b52;--leaf:#65876c;--soft:#fbe5e8}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;overflow-x:hidden;background:radial-gradient(ellipse at 18% 10%,#ffe3e7 0,transparent 38%),radial-gradient(ellipse at 88% 80%,#e5f0df 0,transparent 35%),var(--cream);font-family:'DM Sans',sans-serif;color:var(--deep);display:grid;place-items:center;padding:28px 16px}
+  .glow{position:fixed;inset:0;pointer-events:none;background:linear-gradient(120deg,transparent 30%,#ffffff50 50%,transparent 70%);background-size:200% 100%;animation:shimmer 12s linear infinite;z-index:0}
+  @keyframes shimmer{to{background-position:-200% 0}}
+  .petal{position:fixed;top:-100px;z-index:0;pointer-events:none;opacity:.55;animation:fall linear infinite;filter:drop-shadow(0 4px 5px #7a3b4515)}
+  @keyframes fall{0%{transform:translate3d(0,-8vh,0) rotate(0deg);opacity:0}10%{opacity:.6}90%{opacity:.45}100%{transform:translate3d(70px,115vh,0) rotate(330deg);opacity:0}}
+  .flower{position:fixed;width:clamp(80px,15vw,170px);height:auto;z-index:1;pointer-events:none;opacity:.88;filter:drop-shadow(0 10px 12px #a54b5b20);animation:sway 6s ease-in-out infinite alternate}
+  .flower.one{left:-24px;top:7%;transform-origin:20% 70%}.flower.two{right:-28px;bottom:7%;width:clamp(95px,18vw,205px);animation-delay:-2s}.flower.three{right:7%;top:4%;width:clamp(48px,8vw,90px);opacity:.48;animation-delay:-3s}
+  @keyframes sway{from{transform:rotate(-8deg) translateY(0)}to{transform:rotate(8deg) translateY(12px)}}
+  main{position:relative;z-index:2;width:min(680px,100%);text-align:center;padding:clamp(28px,6vw,58px) clamp(20px,5vw,48px);border:1px solid #ffffffd9;border-radius:32px;background:#fffaf5d9;box-shadow:0 24px 80px #9a53621c, inset 0 1px #fff;backdrop-filter:blur(12px);}
+  .eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:#9a6d76;font-weight:700;margin-bottom:14px}
+  h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,6vw,3.4rem);line-height:1.1;margin:0 0 22px;color:#8d3e58;font-weight:600}
+  .heart{display:inline-block;color:#e56a86;animation:beat 1.5s ease-in-out infinite;margin-left:4px}
+  @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+  .message{font-size:clamp(1rem,2.6vw,1.12rem);line-height:1.95;color:#704a54;max-width:530px;margin:0 auto 28px}
+  .tiny-note{font-size:.84rem;color:#a27b83;margin-top:14px}
+  button,.grab-link{border:0;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:999px;background:linear-gradient(135deg,#df6883,#bd4567);color:white;font:700 1rem 'DM Sans',sans-serif;box-shadow:0 9px 20px #c854732c;transition:transform .2s,box-shadow .2s}
+  button:hover,.grab-link:hover{transform:translateY(-3px);box-shadow:0 13px 25px #c8547340}button:active,.grab-link:active{transform:translateY(0)}
+  .hidden{display:none!important}
+  #giftStage{animation:pop .65s cubic-bezier(.2,.9,.2,1) both;margin-top:26px}
+  @keyframes pop{from{opacity:0;transform:translateY(18px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
+  .gift-title{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2rem);margin:0 0 8px;color:#8d3e58}
+  .gift-sub{margin:0 0 20px;color:#916873}
+  .choco-wrap{width:min(320px,90%);margin:0 auto 18px;perspective:700px;cursor:pointer;animation:float 3s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1deg)}}
+  .packet{height:126px;border-radius:13px;position:relative;overflow:hidden;background:linear-gradient(165deg,#ff5361,#d80d2c 56%,#a9001e);border:3px solid #ff9a9f;box-shadow:0 15px 25px #a20d2930,inset 0 0 0 2px #ffffff45;display:flex;align-items:center;justify-content:center;transform:rotate(-2deg)}
+  .packet:before,.packet:after{content:'';position:absolute;top:0;bottom:0;width:23px;background:repeating-linear-gradient(90deg,#ffb3b5 0 3px,#e8324c 3px 6px);opacity:.85}
+  .packet:before{left:0}.packet:after{right:0}
+  .wrapper-shine{position:absolute;inset:-50% 30%;width:35%;transform:rotate(24deg);background:#ffffff20}
+  .brand-mark{position:relative;z-index:1;border:3px solid #fff5df;background:#fff9ec;color:#d71936;border-radius:18px;padding:11px 18px 8px;font-weight:900;font-size:clamp(1.8rem,6vw,2.5rem);letter-spacing:-.09em;line-height:1;box-shadow:0 3px 0 #8f0018}
+  .brand-mark small{display:block;font-size:.48rem;letter-spacing:.16em;margin-top:7px;color:#7d1729}
+  .packet-end{position:absolute;left:28px;right:28px;top:8px;height:5px;border-radius:5px;background:#ffb5ba65}
+  .grab-hint{font-weight:700;margin:0 0 18px;color:#875565}
+  .final-note{font-size:.92rem;color:#98717a;margin-top:14px;line-height:1.7}
+  .footer{position:relative;z-index:2;margin-top:18px;font-size:.75rem;color:#ad8990;text-align:center}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<!-- Hibiscus illustrations -->
+<svg class="flower one" viewBox="0 0 180 180" aria-hidden="true"><g transform="translate(90 88)"><g fill="#e9899d" stroke="#d96783" stroke-width="1.2"><ellipse rx="24" ry="49" cy="-30"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(72)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(144)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(216)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(288)"/></g><circle r="22" fill="#f8c4a0"/><circle r="11" fill="#f7db91"/><path d="M8 3 Q34 -1 43 -29" fill="none" stroke="#d35b78" stroke-width="4" stroke-linecap="round"/><g fill="#f6d87b"><circle cx="42" cy="-31" r="4"/><circle cx="48" cy="-35" r="3"/><circle cx="45" cy="-24" r="3"/><circle cx="54" cy="-29" r="2.5"/></g></g><path d="M18 155 Q45 133 63 148 Q41 169 18 155" fill="#789875"/><path d="M30 158 Q45 148 58 149" fill="none" stroke="#d2e0c5" stroke-width="2"/></svg>
+<svg class="flower two" viewBox="0 0 180 180" aria-hidden="true"><g transform="translate(90 88)"><g fill="#f0a2b0" stroke="#d8758b" stroke-width="1.2"><ellipse rx="24" ry="49" cy="-30"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(72)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(144)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(216)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(288)"/></g><circle r="22" fill="#f9c8a8"/><circle r="11" fill="#f5dc8c"/><path d="M8 3 Q34 -1 43 -29" fill="none" stroke="#c95878" stroke-width="4" stroke-linecap="round"/><g fill="#f6d87b"><circle cx="42" cy="-31" r="4"/><circle cx="48" cy="-35" r="3"/><circle cx="45" cy="-24" r="3"/><circle cx="54" cy="-29" r="2.5"/></g></g><path d="M154 146 Q129 125 111 141 Q131 164 154 146" fill="#789875"/></svg>
+<svg class="flower three" viewBox="0 0 180 180" aria-hidden="true"><g transform="translate(90 88)"><g fill="#f4b3bd" stroke="#d8758b" stroke-width="1.2"><ellipse rx="24" ry="49" cy="-30"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(72)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(144)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(216)"/><ellipse rx="24" ry="49" cy="-30" transform="rotate(288)"/></g><circle r="22" fill="#f9c8a8"/><circle r="11" fill="#f5dc8c"/><path d="M8 3 Q34 -1 43 -29" fill="none" stroke="#c95878" stroke-width="4" stroke-linecap="round"/></g></svg>
+<main>
+  <div class="eyebrow">a tiny something, just for you 🌺</div>
+  <h1>For my baby<span class="heart">♥</span></h1>
+  <p class="message">my baby really works hard maine dekha sona and ik you work hard i love youuuu and solly i mean like dnd wali baat but yeah ik itna hurt nhi kiya hehe anyways sona exams ki no worries ab habit theek krni hai na i love youuuuuuuu</p>
+  <button id="giftButton" type="button">Gift for you <span aria-hidden="true">🎁</span></button>
+  <section id="giftStage" class="hidden" aria-live="polite">
+    <h2 class="gift-title">A little chocolate for my sona 🍫</h2>
+    <p class="gift-sub">because hardworking babies deserve treats</p>
+    <div class="choco-wrap" id="choco" role="button" tabindex="0" aria-label="Grab the chocolate">
+      <div class="packet"><div class="packet-end"></div><div class="wrapper-shine"></div><div class="brand-mark">KitKat<small>A LITTLE BREAK FOR YOU</small></div></div>
+    </div>
+    <p class="grab-hint">☝️ click to grab</p>
+    <a id="grabButton" class="grab-link" href="https://discord.com/app" target="_blank" rel="noopener noreferrer">Grab your chocolate & join me 💗</a>
+    <p class="final-note">virtual chocolate for now hehe — come say hi when you’re ready 🌷</p>
+  </section>
+</main>
+<div class="footer">made with lots of love, just for you ♡</div>
+<script>
+  // Add drifting hibiscus petals in the background.
+  const petalColors = ['#e9899d','#f2b2be','#d96b88','#f6c5cb'];
+  for (let i = 0; i < 17; i++) {
+    const s = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    s.setAttribute('viewBox','0 0 30 42'); s.setAttribute('class','petal'); s.setAttribute('aria-hidden','true');
+    s.style.left = (Math.random()*100)+'%'; s.style.width=(12+Math.random()*18)+'px';
+    s.style.animationDuration=(11+Math.random()*15)+'s'; s.style.animationDelay=(-Math.random()*24)+'s';
+    s.innerHTML=`<path d="M15 2 C28 12 27 30 15 40 C3 30 2 12 15 2Z" fill="${petalColors[i%petalColors.length]}"/>`;
+    document.body.appendChild(s);
+  }
+  const giftButton = document.getElementById('giftButton');
+  const giftStage = document.getElementById('giftStage');
+  giftButton.addEventListener('click', () => {
+    giftStage.classList.remove('hidden');
+    giftButton.textContent = 'Surprise opened 💝';
+    giftButton.disabled = true;
+    giftButton.style.opacity = '.75';
+    giftStage.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+  // Set this to your actual Discord voice-channel URL before sharing the page.
+  const DISCORD_VOICE_CHANNEL_URL = 'https://discord.com/channels/1522257764234035400/1522257765685530813';
+  const grabButton = document.getElementById('grabButton');
+  const choco = document.getElementById('choco');
+  function grabChocolate(){
+    // Replace the placeholder above with https://discord.com/channels/SERVER_ID/VOICE_CHANNEL_ID
+    if (DISCORD_VOICE_CHANNEL_URL.includes('YOUR_SERVER_ID')) {
+      alert('Hehe 🍫 Open this HTML file and replace YOUR_SERVER_ID and YOUR_VOICE_CHANNEL_ID in the code with your Discord server and voice-channel IDs first!');
+      return;
+    }
+    window.open(DISCORD_VOICE_CHANNEL_URL, '_blank', 'noopener,noreferrer');
+  }
+  grabButton.addEventListener('click', (e)=>{ e.preventDefault(); grabChocolate(); });
+  choco.addEventListener('click', grabChocolate);
+  choco.addEventListener('keydown', (e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();grabChocolate();}});
+</script>
+</body>
+</html>
